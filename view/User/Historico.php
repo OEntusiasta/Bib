@@ -3,7 +3,7 @@
 <?php
     include("../Layout_generico/Header_Generico.php");
     ?>
-<link href="../Css/Home_page.css" rel="stylesheet">
+<link href="../view/Css/Home_page.css" rel="stylesheet">
 <title>Histórico</title>
 </head>
 
@@ -12,8 +12,8 @@
     include("./resources/views/layout/nav.php");
     ?>
     <ul class="items">
-        <li><a href="../User/hp.php">Home</a></li>
-        <li><a href="../User/Emprestimos.php">Empréstimos</a></li>
+        <li><a href="/User/hp">Home</a></li>
+        <li><a href="/User/Emprestimos">Empréstimos</a></li>
         <li><a href="../User/Historico.php">Histórico</a></li>
         <li><a href="../User/Dados_usuario.php">Dados</a></li>
         <li><a href="../Login.php">Sair</a></li>

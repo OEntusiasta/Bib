@@ -6,7 +6,7 @@
     ?> 
 
     <title>Login</title>
-    <link href="./Css/tudo.css" rel="stylesheet"> 
+    <link href="../view/Css/tudo.css" rel="stylesheet"> 
 </head>
 
 <body>

@@ -5,7 +5,9 @@
     include("../Layout_generico/Header_Generico.php");
     ?>
     <title>Home Page</title>
-    <link href="../Css/Home_page.css" rel="stylesheet">
+    <link href="../view/Css/Home_page.css" rel="stylesheet">
+ 
+ 
 
 </head>
 
@@ -13,11 +15,11 @@
 
     <nav>
         <ul class="items">
-            <li><a href="../User/hp.php">Home</a></li>
-            <li><a href="../User/Emprestimos.php">Empréstimos</a></li>
+            <li><a href="/User/hp">Home</a></li>
+            <li><a href="/User/Emprestimos">Empréstimos</a></li>
             <li><a href="../User/Historico.php">Histórico</a></li>
             <li><a href="../User/Dados_usuario.php">Dados</a></li>
-            <li><a href="../Login.php">Sair</a></li>
+            <li><a href="../Login">Sair</a></li>
         </ul>
         </div>
     </nav>
