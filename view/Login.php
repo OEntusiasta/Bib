@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </form>
-                <form method="post" action="">
+                <form method="post" action="/register">
                     <div class="btn-options">
                         <button type="submit" class="btn-info-book-reg"> Registre-se</button>
                     </div>
@@ -47,7 +47,7 @@
 
 </body>
 <?php
-                    include("../view/Layout_generico/Footer_Generico.php");
+                    include("./Layout_generico/Footer_Generico.php");
                 ?>
 
 </html>

@@ -6,16 +6,16 @@
     ?>
     
     <title>Home Page Admin</title>
-    <link href="../Css/Home_page.css" rel="stylesheet">
+    <link href="../view/Css/Home_page.css" rel="stylesheet">
 </head>
 <body>
     
     
                 <ul class="items">
-                    <li><a href="/admin/home_admin">Home</a></li>
-                    <li><a href="/admin/add_book">Adicionar livro</a></li>
-                    <li><a href="/admin/register_adminUser">Cadastrar usuário/admin</a></li>
-                    <li><a href="/admin/list_user">Listar Usuários</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Adicionar livro</a></li>
+                    <li><a href="">Cadastrar usuário/admin</a></li>
+                    <li><a href="">Listar Usuários</a></li>
                     <li><a href="/">Sair</a></li>
                 </ul>
             </div>
@@ -39,8 +39,8 @@
                         <div class="title-type-books">
                             <h1><?= $book['name'] ?></h1>
                         </div>
-                        <hr>
-                        <img class="img-book" src="../Imagens/livro-icon-png-3.png" />
+            
+                        <img class="img-book" src="../view/Imagens/livro-icon-png-3.png" />
                         <div class="title-book">
                             <b><?= $book['status'] ?></b>
                         </div>

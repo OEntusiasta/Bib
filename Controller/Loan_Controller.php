@@ -13,7 +13,7 @@ class Loan_Controller
         {
             $this->loan = new Loan();
             $dateStart = date("Y-m-d H:i:s", time() + 3600*(date("I")));
-            $dateEnd = date("Y-m-d H:i:s", strtotime($dateStart. ' + 7 days'));
+            $dateEnd = date("Y-m-d H:i:s", strtotime($dateStart. ' + 2 days'));
             $this->data = array(
                 "date_start"=>$dateStart,
                 "date_end"=>$dateEnd,

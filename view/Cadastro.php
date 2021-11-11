@@ -7,7 +7,7 @@
     ?>
 
     <title>Cadastro</title>
-    <link href="./Css/tudo.css" rel="stylesheet">
+    <link href="./view/Css/tudo.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <section>
         <div class="container-cadastro">
             <fieldset>
-                <form method="POST" action="">
+                <form method="POST" action="/store_register">
                     <div class="input-login">
                         <h1>Faça seu cadastro </h1>
                         <div class="campos">
@@ -51,7 +51,7 @@
 
                         <div class="btn-options">
                             <button class="btn-concluded" type="submit">Concluido</button>
-                            <button class="btn-exit" class="btn-info-book-exit" href="">Cancelar</button>
+                            <a class="btn-exit" class="btn-info-book-exit" href="/">Cancelar</a>
                         </div>
                     </div>
 

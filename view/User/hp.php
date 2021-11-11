@@ -17,9 +17,9 @@
         <ul class="items">
             <li><a href="/User/hp">Home</a></li>
             <li><a href="/User/Emprestimos">Empréstimos</a></li>
-            <li><a href="../User/Historico.php">Histórico</a></li>
-            <li><a href="../User/Dados_usuario.php">Dados</a></li>
-            <li><a href="../Login">Sair</a></li>
+            <li><a href="/client/historic">Histórico</a></li>
+            <li><a href="/client/data_user">Dados</a></li>
+            <li><a href="/">Sair</a></li>
         </ul>
         </div>
     </nav>
@@ -43,8 +43,8 @@
                             <div class="title-type-books">
                                 <h1><?= $book['category'] ?></h1>
                             </div>
-                            <hr>
-                            <img class="img-book" src="/resources/public/img/book.png" />
+                      
+                            <img class="img-book" src="/view/Imagens/livro-icon-png-3.png" />
                             <div class="title-book">
                                 <b><?= $book['name'] ?></b>
                             </div>
@@ -54,7 +54,7 @@
                             <div class="description-book">
                                 <p><?= $book['description'] ?></p>
                             </div>
-                            <hr>
+                   
                             <div class="btn-options">
                                 <?php
                                 if (($book['status'] == 'pending') || ($book['status'] == 'unavailable')) {
