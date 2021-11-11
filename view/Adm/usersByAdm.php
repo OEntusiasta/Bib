@@ -1,6 +1,5 @@
 <?php
-require_once ('./Model/Book.php');
-require_once ('./Model/User.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -8,13 +7,14 @@ require_once ('./Model/User.php');
 <?php
 include("./resources/views/layout/head.php");
 ?>
+<link href="../view/Css/Home_page.css" rel="stylesheet">
 <title>Lista de Usuários</title>
 </head>
 <body>
 <ul class="items">
     <li><a href="/admin/home_admin">Home</a></li>
-    <li><a href="/admin/add_book">Adicionar livro</a></li>
-    <li><a href="/admin/register_adminUser">Cadastrar usuário/admin</a></li>
+    <li><a href="">Adicionar livro</a></li>
+    <li><a href="">Cadastrar usuário/admin</a></li>
     <li><a href="/admin/list_user">Listar Usuários</a></li>
     <li><a href="/">Sair</a></li>
 </ul>

@@ -12,7 +12,9 @@ require __DIR__ . '/Controller/Book_Controller.php';
 require __DIR__ . '/Controller/Loan_Controller.php';
 require __DIR__ . '/Controller/Historic_Controller.php';
 
+require __DIR__. '/Controller/NewUserAdm_Controller.php';
 require  __DIR__ . '/Controller/BookAdm_Controller.php';
+
 
 
 switch ($request) {
@@ -24,7 +26,7 @@ switch ($request) {
         (new LoginController())->validation();
         break;
 
-        //Register
+        //cadastro
     case '/register':
         (new Register_Controller())->create();
         break;
@@ -45,16 +47,16 @@ switch ($request) {
         (new Loan_Controller())->store();
         header("Location: /User/hp");
         break;
-
+        //devolução
     case '/client/devolution':
         (new Loan_Controller())->delete();
         header("Location: /User/hp");
         break;
-
+        //historico
     case '/client/historic':
         (new Historic_Controller())->index();
         break;
-
+        //dados
     case '/client/data_user':
         (new DataUserController())->edit();
         break;
@@ -69,6 +71,25 @@ switch ($request) {
         (new BookControllerAdmin())->index();
         break;
 
+
+
+    case '/admin/list_user':
+        (new UserControllerAdmin())->index();
+        break;
+
+    case '/admin/data_user':
+        (new UserControllerAdmin())->edit();
+        break;
+
+    case '/admin/update_user':
+        (new UserControllerAdmin())->update();
+        header("Location: /admin/list_user");
+        break;
+
+    case '/admin/delete_user':
+        (new UserControllerAdmin())->delete();
+        header("Location: /admin/home_admin");
+        break;
 
 
 
