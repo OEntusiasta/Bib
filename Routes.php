@@ -4,7 +4,7 @@
 
 $request = $_SERVER['REQUEST_URI'];
 require __DIR__ . '/Controller/Login_Controller.php';
-require  __DIR__ . '/Controller/Register_Controller.php';
+require __DIR__ . '/Controller/Register_Controller.php';
 
 require __DIR__ . '/Controller/User_Controller.php';
 
@@ -12,8 +12,8 @@ require __DIR__ . '/Controller/Book_Controller.php';
 require __DIR__ . '/Controller/Loan_Controller.php';
 require __DIR__ . '/Controller/Historic_Controller.php';
 
-require __DIR__. '/Controller/NewUserAdm_Controller.php';
-require  __DIR__ . '/Controller/BookAdm_Controller.php';
+require __DIR__ . '/Controller/BookAdm_Controller.php';
+require __DIR__ . '/Controller/NewUserAdm_Controller.php';
 
 
 
@@ -72,7 +72,7 @@ switch ($request) {
         break;
 
 
-
+        //User em adm
     case '/admin/list_user':
         (new UserControllerAdmin())->index();
         break;
@@ -91,6 +91,32 @@ switch ($request) {
         header("Location: /admin/home_admin");
         break;
 
+    case '/admin/register_adminUser':
+        (new  Register_Controller())->createClientAdmin();
+        break;
+    case '/admin/store_user':
+        (new  Register_Controller())->storeClientAdmin();
+        header("Location: /admin/home_admin");
+        break;
+        //books
+    case '/admin/add_book':
+        (new BookControllerAdmin())->create();
+        break;
+    case '/admin/edit_book':
+        (new BookControllerAdmin())->edit();
+        break;
+    case '/admin/update_book':
+        (new BookControllerAdmin())->update();
+        header("Location: /admin/home_admin");
+        break;
+    case '/admin/store_book':
+        (new BookControllerAdmin())->store();
+        header("Location: /admin/home_admin");
+        break;
+    case '/admin/delete_book':
+        (new BookControllerAdmin())->delete();
+        header("Location: /admin/home_admin");
+        break;
 
 
 

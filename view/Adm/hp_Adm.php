@@ -13,7 +13,7 @@
     
                 <ul class="items">
                     <li><a href="/admin/home_admin">Home</a></li>
-                    <li><a href="">Adicionar livro</a></li>
+                    <li><a href="/admin/add_book">Adicionar livro</a></li>
                     <li><a href="">Cadastrar usuário/admin</a></li>
                     <li><a href="/admin/list_user">Listar Usuários</a></li>
                     <li><a href="/">Sair</a></li>

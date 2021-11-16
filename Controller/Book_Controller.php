@@ -1,6 +1,6 @@
 <?php
 
-require './Model/Books.php';
+require_once './Model/Books.php';
 
 class Book_Controller
 {

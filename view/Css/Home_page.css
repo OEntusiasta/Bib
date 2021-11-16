@@ -147,8 +147,54 @@ body{
     
 }
 
+.users{
+    color : white;
+}
 
 .bbtn-concluded:hover{
     color: #053c02;
     background-color: #fff;
+  }
+
+  .modal-screen {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-book {
+    background-color: #fff;
+    margin: 10px;
+    border: 1px solid #000;
+    max-width: 50vw;
+  }
+  
+  .modal-book h3 {
+    text-align: center;
+    padding: 5px 0px;
+    color: #fff;
+    font-size: 30px;
+    background-color: #0c6b07;
+    border: 1px solid #000;
+  }
+  
+  
+  /* ---------------------------------------- Admin ---------------------------------------- */
+  .campos #typeUser, .campo #typeAdmin, .campos #yes, .campos #no {
+    margin: 15px 0px;
+  }
+  
+  .devolution label {
+    margin-right: 20px;
+  }
+  
+  /* -------------------- Modal -------------------- */
+  
+  .date-book {
+    padding: 5px;
+  }
+  
+  .date-book input {
+    margin-left: 10px;
+    padding-left: 10px;
   }
