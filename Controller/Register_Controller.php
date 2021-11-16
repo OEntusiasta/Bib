@@ -47,7 +47,7 @@ class Register_Controller
     public function indexClientAdmin()
     {
         $this->register->all();
-        include './view/Adm/usersByAdm.php';
+        include './view/Adm/RegisterUser_Adm.php';
     }
 
     public function show()
@@ -62,7 +62,7 @@ class Register_Controller
 
     public function createClientAdmin()
     {
-        include './view/Adm/usersByAdm.php';
+        include './view/Adm/RegisterUser_Adm.php';
     }
 
     public function store()
@@ -79,7 +79,7 @@ class Register_Controller
 
     public function edit()
     {
-        include './resources/views/admin/updateBook.php';
+        include './view/Adm/Update_book.php';
     }
 
     public function updateClientAdmin()

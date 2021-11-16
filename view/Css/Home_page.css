@@ -13,7 +13,7 @@ body{
 .nav {
   background-color: #053c02;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   position: fixed;
   width: 100%;
@@ -21,7 +21,9 @@ body{
   
   
 }
-
+.campos{
+    color: white;
+}
 .items {
     float: right;
     display: flex;
