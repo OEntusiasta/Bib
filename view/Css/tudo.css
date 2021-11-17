@@ -13,6 +13,10 @@ a {
     cursor: pointer;
 }
 
+
+
+
+
 .container {
     width: 100%;
     display: grid;
@@ -20,7 +24,7 @@ a {
     padding-top: 100px;
     padding-bottom: 20px;
     border: none;
-    background-color: #053c02;
+
 }
 
 .input-login{
