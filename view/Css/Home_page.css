@@ -40,9 +40,7 @@ body{
 
 .type-books {
     display: grid;
-    /*justify-content: center;*/
-    /*flex-direction: row;*/
-    /*flex-wrap: wrap;*/
+ 
      grid-template-columns: 2fr 2fr 2fr 2fr;
 }
 
@@ -53,7 +51,7 @@ body{
     
     font-size: 25px;
     padding: 10px;
-    /* border: 1px solid #000; */
+ 
 }
 
 .books {
@@ -163,7 +161,9 @@ body{
     justify-content: center;
     align-items: center;
   }
-  
+  .campos{
+      color: black;
+  }
   .modal-book {
     background-color: #fff;
     margin: 10px;

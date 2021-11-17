@@ -47,7 +47,7 @@
 
 </body>
 <?php
-                    include("./Layout_generico/Footer_Generico.php");
+                    include("./view/Layout_generico/Footer_Generico.php");
                 ?>
 
 </html>

@@ -7,6 +7,7 @@ include("./resources/views/layout/head.php");
 
 <title>Cadastro</title>
 <link href="../view/Css/Home_page.css" rel="stylesheet">
+
 </head>
 
 <div>
@@ -22,6 +23,9 @@ include("./resources/views/layout/head.php");
 
 <section>
     <div class="container">
+    <div id="modal-screen-add-book" class="modal-screen">
+                <div class="modal-book">
+                    <h3>Adicionar Usuário</h3>
         <fieldset>
             <form method="POST" action="/admin/store_user">
                 <div class="input-login">

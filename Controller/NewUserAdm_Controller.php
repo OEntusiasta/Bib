@@ -51,7 +51,7 @@ class UserControllerAdmin
     {
         $id = $_POST['id'];
         $user = (new User())->find($id);
-        include '';
+        include './view/Adm/UptadeUser_adm.php';
     }
 
     public function update()

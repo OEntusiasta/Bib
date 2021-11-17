@@ -46,10 +46,10 @@ abstract class Model
             $_SESSION['name'] = $data[0]['name'];
             $_SESSION['phone'] = $data[0]['phone'];
             return $data[0]['is_admin'];
-            echo "Correto";
+    
         }
         else{
-            echo "Incorreto";
+    
         }
         $this->desconnect();
     }
@@ -111,4 +111,11 @@ abstract class Model
             "select $table.* from $table inner join $this->table on $this->table.$key = $table.$foreignKey ORDER BY id");
         return (pg_fetch_all($result));
     }
+
+    public function read_all_historic(int $id){
+        $this->connect();
+        $result = pg_query($this->dbconnection, "SELECT a.id, a.date_start, a.date_end, a.user_id, a.deleted_at, a.book_id, b.name FROM $this->table a INNER JOIN books b on (a.book_id = b.id) where a.user_id=$id and a.deleted_at IS NOT NULL ORDER BY ID");
+        $this->desconnect();
+        return (pg_fetch_all($result));
+}
 }

@@ -38,7 +38,7 @@ require_once('./Model/Model.php');
                 <?php
                 foreach ($historics as $historic) {
                     if ($historic['user_id'] == $_SESSION['id']) {
-                        if ($historic['date_end'] < date("Y-m-d H:i:s", time() + 3600 * (date("I")))) {
+                        if ($historic['date_end'] < date("d-m-Y H:i", time() + 3600 * (date("I")))) {
                             if ($book = (new Book())->find($historic['book_id'])) {
                                 ?>
                                 <div class="books">

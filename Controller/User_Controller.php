@@ -62,7 +62,7 @@ class DataUserController
         //chamar a tela de edição de dados
         $id = $_POST['id'];
         $data_client = (new User())->find($id);
-        include './resources/views/admin/updateUsers.php';
+        include './view/Adm/UptadeUser_adm.php';
     }
 
     public function update()

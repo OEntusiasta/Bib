@@ -44,10 +44,7 @@
                             <label for="phone">Telefone</label>
                             <input type="tel" name="phone" id="phone" title="Digite seu telefone" size="30" minlength="11" maxlength="15" required />
                         </div>
-                        <div class="check_adm">
-                            <input type="checkbox" id="admin" name="admin " checked>
-                            <label for="admin">Sou Administrador</label>
-                        </div>
+                  
 
                         <div class="btn-options">
                             <button class="btn-concluded" type="submit">Concluido</button>
@@ -62,7 +59,7 @@
 </body>
 
 <?php
-include("../view/Layout_generico/Footer_Generico.php");
+include("./view/Layout_generico/Footer_Generico.php");
 ?>
 
 </html>

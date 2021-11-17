@@ -88,7 +88,7 @@ switch ($request) {
 
     case '/admin/delete_user':
         (new UserControllerAdmin())->delete();
-        header("Location: /admin/home_admin");
+        header("Location: /admin/list_user");
         break;
 
     case '/admin/register_adminUser':
