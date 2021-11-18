@@ -3,29 +3,45 @@
 require_once('./Model/Model.php');
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<?php
+<html>
+
+<head>
+    <?php
     include("../Layout_generico/Header_Generico.php");
     ?>
-<link href="../view/Css/Home_page.css" rel="stylesheet">
-<title>Histórico</title>
+    <title>Empréstimos</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="../view/Css/InsideUser.css" rel="stylesheet">
 </head>
 
 <body>
-    <?php
-    include("./resources/views/layout/nav.php");
-    ?>
-    <ul class="items">
-            <li><a href="/User/hp">Home</a></li>
-            <li><a href="/User/Emprestimos">Empréstimos</a></li>
-            <li><a href="/client/historic">Histórico</a></li>
-            <li><a href="/client/data_user">Dados</a></li>
-            <li><a href="/">Sair</a></li>
-    </ul>
-    </div>
+
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/User/hp">Biblioteca Online</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/User/hp">Home</a></li>
+                    <li><a href="/User/Emprestimos">Empréstimos</a></li>
+                    <li><a href="/client/historic">Histórico</a></li>
+                    <li><a href="/client/data_user"><span class=" glyphicon glyphicon-user"></span>Meus Dados</a></li>
+                    <li>
+                        <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="/" aria-expanded="false" aria-controls="nav-collapse2"><span class="glyphicon glyphicon-log-in"></span>Sair</a>
+                    </li>
+                </ul>
+            </div>
     </nav>
-    </section>
 
   
 <section>
