@@ -1,8 +1,7 @@
 <?php
-
-require_once('./Model/Model.php');
+require_once('./Model/Books.php');
+require_once('./Model/User.php');
 ?>
-
 <html>
 
 <head>

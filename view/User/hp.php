@@ -9,8 +9,10 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link href="../view/Css/InsideUser.css" rel="stylesheet">  
+    <link href="../view/Css/InsideUser.css" rel="stylesheet">
 </head>
+
+
 
 <body>
 
@@ -43,7 +45,7 @@
         <div class="mensagem">
             <h1><b> Bem Vindo a Biblioteca Online<b> <?= $_SESSION['name'] ?> <h1>
         </div>
-        <table class="table">
+        <table class="table ">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Livro</th>
@@ -62,8 +64,8 @@
                         foreach ($booksClient as $book) {
                         ?>
                             <tr>
-                                <td><img src="../view/Imagens//livro-icon-png-3.png" style="width: 3vw" >
-                                <img</td>
+                                <td><img src="../view/Imagens//livro-icon-png-3.png" style="width: 3vw">
+                                    <img</td>
                                 <td><?= $book['category'] ?></td>
                                 <td><?= $book['name'] ?></td>
                                 <td><?= $book['author'] ?></td>

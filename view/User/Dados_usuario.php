@@ -35,14 +35,14 @@
                                 <span class="input-group-text"><i class="fas fa-at"></i>
 
                             </div>
-                            <input type="email" name="email" id="email" size="30" required autofocus value="<?= $_SESSION['email'] ?> "/>
+                            <input type="email" name="email" id="email" placeholder="E-mail"size="30" required autofocus value="<?= $_SESSION['email'] ?> "/>
                         </div>
 
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" name="password" id="password"  value="<?= $_SESSION['password'] ?>" size="30" required />
+                            <input type="password" name="password" id="password"placeholder="Senha"  value="<?= $_SESSION['password'] ?>" size="30" required />
                         </div>
 
                         <div class="input-group form-group">
@@ -50,7 +50,7 @@
                                 <span class="input-group-text"><i class="fas fa-user-astronaut"></i>
 
                             </div>
-                            <input type="text" name="name" id="name"  value="<?= $_SESSION['name'] ?>" size="30" required />
+                            <input type="text" name="name" id="name" placeholder="Nome"  value="<?= $_SESSION['name'] ?>" size="30" required />
                         </div>
 
                         <div class="input-group form-group">
@@ -58,7 +58,7 @@
                                 <span class="input-group-text"><i class="fas fa-phone"></i>
 
                             </div>
-                            <input type="tel" name="phone" id="phone" value="<?= $_SESSION['phone'] ?>" size="30" minlength="11" maxlength="15" required />
+                            <input type="tel" name="phone" id="phone" placeholder="Telefone" value="<?= $_SESSION['phone'] ?>" size="30" minlength="11" maxlength="15" required />
                         </div>
                         <div class="btn-options d-flex justify-content-center">
                             <button class="btn btn-primary" type="submit" class="btn-info-book-log">Concluido</button>

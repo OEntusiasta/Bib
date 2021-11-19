@@ -1,77 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<?php
-include("./resources/views/layout/head.php");
-?>
+<head>
+    <?php
+    include("../view/Layout_generico/Header_Generico.php");
+    ?>
 
-<title>Cadastro</title>
-<link href="../view/Css/Home_page.css" rel="stylesheet">
-
+    <title>Adicionar Livro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="../view/Css/Outside.css" rel="stylesheet">
 </head>
 
-<div>
-    <ul class="items">
-        <li><a href="/admin/home_admin">Home</a></li>
-        <li><a href="/admin/add_book">Adicionar livro</a></li>
-        <li><a href="/admin/register_adminUser">Cadastrar usuário/admin</a></li>
-        <li><a href="/admin/list_user">Listar Usuários</a></li>
-        <li><a href="/">Sair</a></li>
-    </ul>
-</div>
-</nav>
 
-<section>
-    <div class="container">
-    <div id="modal-screen-add-book" class="modal-screen">
-                <div class="modal-book">
-                    <h3>Adicionar Usuário</h3>
-        <fieldset>
-            <form method="POST" action="/admin/store_user">
-                <div class="input-login">
-                    <h1>Cadastre usuário ou admin </h1>
-                    <div class="campos">
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email" title="Digite seu e-mail" size="30" required autofocus />
-                    </div>
 
-                    <div class="campos">
-                        <label for="password">Senha</label>
-                        <input type="password" name="password" id="password" title="Digite sua senha" size="30" required />
-                    </div>
-
-                    <div class="campos">
-                        <label for="name">Nome</label>
-                        <input type="text" name="name" id="name" title="Digite seu nome" size="30" required />
-                    </div>
-
-                    <div class="campos">
-                        <label for="phone">Telefone</label>
-                        <input type="tel" name="phone" id="phone" title="Digite seu telefone" size="30" minlength="11" maxlength="15" required />
-                    </div>
-
-                    <div class="campos">
-                        <label>Tipo da conta</label>
-                        <div class="type-user">
-                            <input type="radio" name="type_user" id="typeUser" value="<?= false ?>" required />
-                            <label> Usuário normal</label>
-                        </div>
-                        <div class="type-user">
-                            <input type="radio" name="type_user" id="typeAdmin" value="<?= true ?>" required />
-                            <label> Usuário Admin</label>
-                        </div>
-                    </div>
-
-                    <div class="btn-options">
-                        <button class="btn-concluded" type="submit">Concluido</button>
-                    </div>
-                </div>
-            </form>
-        </fieldset>
+<body>
     </div>
-</section>
+    </nav>
+    </section>
+    <div class="container-add-book">
+
+        <div class="d-flex justify-content-center h-90">
+            <div class="position-fixed" id="particles-js" style="width: 100vw; height: 100vh;"></div>
+            <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>
+            <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436735/app.js"></script>
+            <div class="card h-100">
+                <div class="card-header">
+                    <h3>Adicionar Usuário</h3>
+                </div>
+                <form method="POST" action="/admin/store_user">
+                    <div class="card-body">
+
+                        <div class="input-group form-group">
+                            <input type="email" name="email" id="email" placeholder="E-mail" size="30" required autofocus />
+                        </div>
 
 
+                        <div class="input-group form-group">
+
+                            <input type="text" name="name" id="name" placeholder="Nome" size="30" required />
+                        </div>
+
+                        <div class="input-group form-group">
+                            <input type="password" name="password" id="password" placeholder="Senha" size="30" required />
+                        </div>
+                        <div class="input-group form-group">
+                            <input type="tel" name="phone" id="phone" placeholder="telefone" size="30" minlength="11" maxlength="15" required />
+                        </div>
+                        <div class="input-group form-group">
+                            <select name="status" id="status">
+                                <option name="type_user" id="typeUser" value="<?= false ?>" required>Usuário Normal</option>
+                                <option name="type_user" id="typeAdmin" value="<?= true ?>" required>Usuário Administrador</option>
+
+                            </select>
+                        </div>
+
+
+                            <div class="btn-options d-flex justify-content-center">
+                                <button class="btn btn-primary" type="submit" class="btn-info-book-log">Concluido</button>
+                            </div>
+                            <div class="btn-options d-flex justify-content-center">
+                                <a class="btn-exit" class="btn-info-book-exit" href="/admin/home_admin">Cancelar</a>
+
+                            </div>
+                        </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>

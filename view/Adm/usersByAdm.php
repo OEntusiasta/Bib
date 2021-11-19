@@ -1,4 +1,9 @@
+<?php
+require_once ('./Model/Books.php');
+require_once ('./Model/User.php');
+?>
 <html>
+
 
 <head>
     <?php
@@ -9,7 +14,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link href="../view/Css/InsideUser.css" rel="stylesheet">  
+    <link href="../view/Css/InsideUser.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,50 +44,57 @@
             </div>
     </nav>
 
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">É administrador?</th>
+                    <th scope="col">Atualizar</th>
+                    <th scope="col">Excluir</th>
 
-    <section>
-        <div class="container">
-            <div class="section-books">
-                <div class="list_users">
-                    <?php
-                    foreach ($users as $user) {
-                    ?>
-                        <div class="users">
-                            <div class="title-type-books">
-                                <label>Cliente: <?= $user['name'] ?></label>
-                            </div>
-                            <div class="title-type-books">
-                                <label>Email: <?= $user['email'] ?></label>
-                            </div>
-                            <div class="title-type-books">
-                                <label>Telefone: <?= $user['phone'] ?></label>
-                            </div>
-                            <div class="title-type-books">
-                                <label>Admin ?: <?= $user['is_admin'] ?></label>
-                            </div>
-
-                            <div class="btn">
-                                <form method="post" action="/admin/data_user">
-                                    <div class="btn-options">
-                                        <input type="hidden" name="id" value="<?= $user['id'] ?>" />
-                                        <button type="submit" class="btn-info-book" id="info-book-modal">Atualizar cliente </button>
-                                    </div>
+                </tr>
+            </thead>
+            <tbody>
+                <div class="section-books">
+                    <div class="type-books">
+                        <?php
+                        foreach ($users as $user) {
+                        ?>
+                            <tr>
+                                <td> <?= $user['name'] ?></td>
+                                <td><?= $user['email'] ?></td>
+                                <td><?= $user['phone'] ?></td>
+                                <td> <?= $user['is_admin'] ?></td>
+                                <td>
+                                    <div class="btn">
+                                        <form method="post" action="/admin/data_user">
+                                            <div class="btn-options">
+                                                <input type="hidden" name="id" value="<?= $user['id'] ?>" />
+                                                <button type="submit" class="btn btn-primary" id="info-book-modal">Atualizar cliente </button>
+                                            </div>
+                                </td>
+                                <td>
                                 </form>
                                 <form method="post" action="/admin/delete_user">
                                     <div class="btn-options">
                                         <input type="hidden" name="id" value="<?= $user['id'] ?>" />
-                                        <button type="submit" class="btn-info-book" id="info-book-modal">Excluir cliente </button>
+                                        <button type="submit" class="btn btn-primary" id="info-book-modal">Excluir cliente </button>
                                     </div>
                                 </form>
-                            </div>
-                        </div>
-                    <?php } ?>
+                                </td>
+                            </tr>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            <?php } ?>
+    </div>
+    </tbody>
+    </table>
+    </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
