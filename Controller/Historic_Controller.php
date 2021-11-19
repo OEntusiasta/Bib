@@ -15,7 +15,7 @@ class Historic_Controller
 
     public function index()
     {
-        $historics = $this->historic->all();
+        $historics = $this->historic->all;
         include './view/User/Historico.php';
     }
 
@@ -31,22 +31,22 @@ class Historic_Controller
 
     public function store()
     {
-        //ação de criar livros
+    
     }
 
     public function edit()
     {
-        //chamar a tela de edição de livros
+      
     }
 
     public function update()
     {
-        //ação de editar livro
+      
     }
 
     public function delete()
     {
-        //ação de deletar o livro
+     
     }
 
 }

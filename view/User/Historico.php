@@ -1,6 +1,10 @@
+
+<!--
+
 <?php
 require_once('./Model/Books.php');
 require_once('./Model/User.php');
+require_once('./Model/loan.php');
 ?>
 <html>
 
@@ -8,7 +12,7 @@ require_once('./Model/User.php');
     <?php
     include("../Layout_generico/Header_Generico.php");
     ?>
-    <title>Empréstimos</title>
+    <title>Histórico</title>
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -52,8 +56,8 @@ require_once('./Model/User.php');
             <div class="type-books">
                 <?php
                 foreach ($historics as $historic) {
-                    if ($historic['user_id'] == $_SESSION['id']) {
-                        if ($historic['date_end'] < date("d-m-Y H:i", time() + 3600 * (date("I")))) {
+                    if ($historics['user_id'] == $_SESSION['id']) {
+                        if ($historics['date_end'] < date("d-m-Y H:i", time() + 3600 * (date("I")))) {
                             if ($book = (new Book())->find($historic['book_id'])) {
                                 ?>
                                 <div class="books">
@@ -85,3 +89,4 @@ require_once('./Model/User.php');
 </body>
 
 </html>
+            -->
