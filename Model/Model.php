@@ -15,15 +15,15 @@ abstract class Model
     public function connect()
     {
         $this->connection = pg_connect(
-            "host=$this->host " . 
-            "port=$this->port " . 
-            "dbname=$this->dbName " . 
-            "user=$this->dbUser " . 
-            "password=$this->dbPassword "
+            "host=$this->host " .
+                "port=$this->port " .
+                "dbname=$this->dbName " .
+                "user=$this->dbUser " .
+                "password=$this->dbPassword "
         );
     }
 
-    public function setTable(string $table) 
+    public function setTable(string $table)
     {
         $this->table = $table;
     }
@@ -38,7 +38,7 @@ abstract class Model
         $this->connect();
         $result = pg_query($this->connection, "SELECT * FROM users WHERE email = '$email' AND password = '$password'");
         $login_status = pg_num_rows($result);
-        if($login_status > 0) {
+        if ($login_status > 0) {
             $data = pg_fetch_all($result);
             $_SESSION['id'] = $data[0]['id'];
             $_SESSION['email'] = $data[0]['email'];
@@ -46,10 +46,7 @@ abstract class Model
             $_SESSION['name'] = $data[0]['name'];
             $_SESSION['phone'] = $data[0]['phone'];
             return $data[0]['is_admin'];
-    
-        }
-        else{
-    
+        } else {
         }
         $this->desconnect();
     }
@@ -87,7 +84,7 @@ abstract class Model
         $this->desconnect();
     }
 
-    public function delete(int $id) 
+    public function delete(int $id)
     {
         $this->connect();
         $result = pg_delete($this->connection, $this->table, ['id' => $id]);
@@ -99,7 +96,8 @@ abstract class Model
         $this->connect();
         $result = pg_query(
             $this->connection,
-            "select $table.* from $table inner join $this->table on $this->table.$key = $table.$foreignKey ORDER BY id");
+            "select $table.* from $table inner join $this->table on $this->table.$key = $table.$foreignKey ORDER BY id"
+        );
         return (pg_fetch_all($result)[0]);
     }
 
@@ -108,14 +106,24 @@ abstract class Model
         $this->connect();
         $result = pg_query(
             $this->connection,
-            "select $table.* from $table inner join $this->table on $this->table.$key = $table.$foreignKey ORDER BY id");
+            "select $table.* from $table inner join $this->table on $this->table.$key = $table.$foreignKey ORDER BY id"
+        );
         return (pg_fetch_all($result));
     }
 
-    public function read_all_historic(int $id){
+    public function read_all_historic(int $id)
+    {
         $this->connect();
         $result = pg_query($this->connection, "SELECT a.id, a.date_start, a.date_end, a.user_id, a.deleted_at, a.book_id, b.name FROM $this->table a INNER JOIN books b on (a.book_id = b.id) where a.user_id=$id and a.deleted_at IS NOT NULL ORDER BY ID");
         $this->desconnect();
         return (pg_fetch_all($result));
-}
+    }
+
+    public function Loan(int $id)
+    {
+        $this->connect();
+        $result = pg_query($this->connection, "SELECT a.id, a.date_start, a.date_end, a.user_id, a.deleted_at, a.book_id, b.name FROM $this->table a INNER JOIN books b on (a.book_id = b.id) where a.user_id=$id and a.deleted_at IS NULL ORDER BY ID");
+        $this->desconnect();
+        return (pg_fetch_all($result));
+    }
 }

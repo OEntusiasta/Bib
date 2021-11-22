@@ -50,7 +50,7 @@ switch ($request) {
         //devolução
     case '/client/devolution':
         (new Loan_Controller())->delete();
-        header("Location: /User/hp");
+        header("Location: /User/Emprestimos");
         break;
         //historico
     case '/client/historic':

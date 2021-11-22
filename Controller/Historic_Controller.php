@@ -2,6 +2,7 @@
 
 require_once './Model/loan.php';
 
+
 class Historic_Controller
 {
 
@@ -13,11 +14,11 @@ class Historic_Controller
         $this->historic = new Loan();
     }
 
-    public function index()
-    {
-        $historics = $this->historic->all;
+    public function index(){
+        $historics = $this->historic->read_all_historic($_SESSION['id']);
         include './view/User/Historico.php';
     }
+
 
     public function show()
     {
@@ -46,6 +47,7 @@ class Historic_Controller
 
     public function delete()
     {
+    
      
     }
 

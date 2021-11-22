@@ -1,6 +1,3 @@
-
-<!--
-
 <?php
 require_once('./Model/Books.php');
 require_once('./Model/User.php');
@@ -18,9 +15,10 @@ require_once('./Model/loan.php');
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href="../view/Css/InsideUser.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="overflow-hidden">
 
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <div class="container">
@@ -46,47 +44,54 @@ require_once('./Model/loan.php');
             </div>
     </nav>
 
-  
-<section>
-    <div class="container">
-        <div class="section-books">
-            <div class="title-type-books">
-                <h1>Histórico de livros emprestados</h1>
-            </div>
-            <div class="type-books">
-                <?php
-                foreach ($historics as $historic) {
-                    if ($historics['user_id'] == $_SESSION['id']) {
-                        if ($historics['date_end'] < date("d-m-Y H:i", time() + 3600 * (date("I")))) {
-                            if ($book = (new Book())->find($historic['book_id'])) {
-                                ?>
-                                <div class="books">
-                                <div class="title-type-books">
-                                    <b><?= $book['name'] ?></b>
-                                </div>
-                                <hr>
-                                <img class="img-book" src="/view/Imagens/livro-icon-png-3.png"/>
-                                <div class="author-book">
-                                    <?= $book['author'] ?>
-                                </div>
-                            <?php } ?>
-                            <div class="date-book">
-                                <label for="date_start"><b>Data da locação: </b><?= $historic['date_start'] ?> </label>
-                            </div>
-                            <div class="date-book">
-                                <label for="date_end"><b>Data da entrega: </b><?= $historic['date_end'] ?></label>
-                            </div>
-                       
-                            </div>
-                        <?php }
-                    }
-                } ?>
-            </div>
+    <div class="container overflow-auto">
+        <div class="mensagem">
+            <h1>Histórico de livros emprestados</h1>
         </div>
-</section>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Livro</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Data da locação</th>
+                    <th scope="col">Data da entrega</th>
+                </tr>
+            </thead>
+            <tbody>
+                <div class="section-books">
+                    <div class="type-books">
+                        <?php
+                        foreach ($historics as $historic) {
+                            if ($historic['user_id'] == $_SESSION['id']) {
+                                if ($historic['date_end'] < date("d-m-Y H:i", time() + 3600 * (date("I")))) {
+                                    if ($book = (new Book())->find($historic['book_id'])) {
+                        ?>
+                                        <tr>
+                                            <td><img src="../view/Imagens//livro-icon-png-3.png" style="width: 3vw">
+                                                <img</td>
+                                            <td><?= $book['name'] ?></td>
+                                            <td><?= $book['author'] ?></td>
+                                            <td><?= $historic['date_start'] ?> </td>
+                                            <td><?= $historic['date_end'] ?></td>
+
+                                        </tr>
+                    </div>
+                </div>
+
+
+        <?php }
+                                } ?>
+<?php
+                            }
+                        } ?>
+
+            </tbody>
+        </table>
+    </div>
+
 
 
 </body>
 
 </html>
-            -->

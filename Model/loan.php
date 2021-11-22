@@ -22,4 +22,6 @@ class Loan extends Model
     {
         return $this->oneToOne('books', 'id', 'book_id');
     }
+
+    
 }

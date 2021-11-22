@@ -26,7 +26,7 @@ class Loan_Controller
 
     public function index()
     {
-        $loans = $this->loan->all();
+        $loans = $this->loan->Loan($_SESSION['id']);
         include './view/User/Emprestimos.php';
     }
 
@@ -59,7 +59,10 @@ class Loan_Controller
 
     public function delete()
     {
-        $this->loan->delete($_POST['id']);
+        $data = array("deleted_at"=>date("Y-m-d H:i", time() + 3600*(date("I"))));
+        (new Loan())->update($_POST['id'], $data);
+
+
         $dataUpdate = array("status"=>'available');
         (new Book())->update($_POST['book_id'], $dataUpdate);
     }
