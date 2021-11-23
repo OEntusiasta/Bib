@@ -18,12 +18,12 @@
     </section>
     <div class="container">
 
-        <div class="d-flex justify-content-center h-100">
+        <div class="d-flex justify-content-center h-90">
         <div class="position-fixed" id="particles-js" style="width: 100vw;  height: 100vh;"></div>
             <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>
             <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436735/app.js"></script>
     
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-header">
                     <h3>Atualizar dados</h3>
                 </div>
@@ -33,16 +33,16 @@
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-at"></i>
-
                             </div>
-                            <input type="email" name="email" id="email" placeholder="E-mail"size="30" required autofocus value="<?= $_SESSION['email'] ?> "/>
+                            <input type="email" name="email" id="email"  class="form-control"  placeholder="E-mail"size="30" required autofocus value="<?= $_SESSION['email'] ?> "/>
                         </div>
+                       
 
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" name="password" id="password"placeholder="Senha"  value="<?= $_SESSION['password'] ?>" size="30" required />
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Senha"  value="<?= $_SESSION['password'] ?>" size="30" required />
                         </div>
 
                         <div class="input-group form-group">
@@ -50,7 +50,7 @@
                                 <span class="input-group-text"><i class="fas fa-user-astronaut"></i>
 
                             </div>
-                            <input type="text" name="name" id="name" placeholder="Nome"  value="<?= $_SESSION['name'] ?>" size="30" required />
+                            <input type="text" name="name" id="name" class="form-control"  placeholder="Nome"  value="<?= $_SESSION['name'] ?>" size="30" required />
                         </div>
 
                         <div class="input-group form-group">
@@ -58,7 +58,7 @@
                                 <span class="input-group-text"><i class="fas fa-phone"></i>
 
                             </div>
-                            <input type="tel" name="phone" id="phone" placeholder="Telefone" value="<?= $_SESSION['phone'] ?>" size="30" minlength="11" maxlength="15" required />
+                            <input type="tel" name="phone" id="phone" class="form-control"  placeholder="Telefone" value="<?= $_SESSION['phone'] ?>" size="30" minlength="11" maxlength="15" required />
                         </div>
                         <div class="btn-options d-flex justify-content-center">
                             <button class="btn btn-primary" type="submit" class="btn-info-book-log">Concluido</button>

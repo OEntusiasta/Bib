@@ -47,7 +47,7 @@
                             <input type="password" name="password" id="password" placeholder="Senha" size="30" required />
                         </div>
                         <div class="input-group form-group">
-                            <input type="tel" name="phone" id="phone" placeholder="telefone" size="30" minlength="11" maxlength="15" required />
+                            <input type="tel" name="phone" id="phone" placeholder="Telefone" size="30" minlength="11" maxlength="15" required />
                         </div>
                         <div class="input-group form-group">
                             <select name="status" id="status">

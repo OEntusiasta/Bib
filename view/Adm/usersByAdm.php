@@ -78,6 +78,7 @@ require_once('./Model/User.php');
                                     </td>
                                     <td>
                                         </form>
+                                        <div class="btn">
                                         <form method="post" action="/admin/delete_user">
                                             <div class="btn-options">
                                                 <input type="hidden" name="id" value="<?= $user['id'] ?>" />
