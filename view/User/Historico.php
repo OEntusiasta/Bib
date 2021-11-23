@@ -44,10 +44,12 @@ require_once('./Model/loan.php');
             </div>
     </nav>
 
-    <div class="container overflow-auto">
-        <div class="mensagem">
+    <div class="mensagem">
             <h1>Histórico de livros emprestados</h1>
         </div>
+    <div class="container-table">
+    <div class="container overflow-auto">
+
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -90,7 +92,7 @@ require_once('./Model/loan.php');
         </table>
     </div>
 
-
+    </div>
 
 </body>
 

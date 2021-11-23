@@ -41,12 +41,13 @@
             </div>
     </nav>
 
-
-    <div class="container">
-        <div class="mensagem">
+    <div class="mensagem">
             <h1><b> Bem Vindo a Biblioteca Online<b> <?= $_SESSION['name'] ?> <h1>
         </div>
-        <table class="table ">
+
+    <div class="container-table">
+    <div class="container">
+        <table class="table">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Livro</th>
@@ -95,7 +96,8 @@
     </div>
     </tbody>
     </table>
-    </div>
+        </div>
+                                        </div>
 
 
 

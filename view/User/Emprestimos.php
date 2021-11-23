@@ -43,68 +43,69 @@ require_once('./Model/User.php');
     </nav>
 
 
-
-    <div class="container">
-        <div class="mensagem">
-            <h1>Livros emprestados</h1>
-        </div>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Livro</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Autor</th>
-                    <th scope="col">Data da locação: </th>
-                    <th scope="col">Data da entrega: </th>
-                    <th scope="col">Devolução</th>
-
-
-                </tr>
-            </thead>
-            <tbody>
-                <div class="section-books">
-                    <div class="type-books">
-                        <?php
-                        foreach ($loans as $userloan) {
-                            if ($userloan['user_id'] == $_SESSION['id']) {
-                        ?>
-                                <tr>
-                                    <td><img src="../view/Imagens//livro-icon-png-3.png" style="width: 3vw">
-                                        <img</td>
-                                    <td>
-                                        <?php if ($book = (new Book())->find($userloan['book_id'])) { ?>
-                                            <b><?= $book['name'] ?></b>
-                                    </td>
-                                    <td>
-                                        <?php if ($book = (new Book())->find($userloan['book_id'])) { ?>
-                                            <b><?= $book['author'] ?><b>
-
-                                    </td>
-                                    <td><?= $userloan['date_start'] ?> </td>
-                                    <td></b><?= $userloan['date_end'] ?></td>
-                                    <td>
-                                        <form method="post" action="/client/devolution">
-                                            <input type="hidden" name="id" value="<?= $userloan['id'] ?>">
-                                            <input type="hidden" name="book_id" value="<?= $book['id'] ?>">
-                                            <button class="btn btn-primary" type="submit">Devolver</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                    </div>
-                </div>
-
-
-        <?php }
-                                        } ?>
-<?php
-                            }
-                        } ?>
-
-            </tbody>
-        </table>
+    <div class="mensagem">
+        <h1>Livros emprestados</h1>
     </div>
+    <div class="container-table">
+        <div class="container">
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Livro</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Data da locação: </th>
+                        <th scope="col">Data da entrega: </th>
+                        <th scope="col">Devolução</th>
 
 
+                    </tr>
+                </thead>
+                <tbody>
+                    <div class="section-books">
+                        <div class="type-books">
+                            <?php
+                            foreach ($loans as $userloan) {
+                                if ($userloan['user_id'] == $_SESSION['id']) {
+                            ?>
+                                    <tr>
+                                        <td><img src="../view/Imagens//livro-icon-png-3.png" style="width: 3vw">
+                                            <img< /td>
+                                        <td>
+                                            <?php if ($book = (new Book())->find($userloan['book_id'])) { ?>
+                                                <b><?= $book['name'] ?></b>
+                                        </td>
+                                        <td>
+                                            <?php if ($book = (new Book())->find($userloan['book_id'])) { ?>
+                                                <b><?= $book['author'] ?><b>
+
+                                        </td>
+                                        <td><?= $userloan['date_start'] ?> </td>
+                                        <td></b><?= $userloan['date_end'] ?></td>
+                                        <td>
+                                            <form method="post" action="/client/devolution">
+                                                <input type="hidden" name="id" value="<?= $userloan['id'] ?>">
+                                                <input type="hidden" name="book_id" value="<?= $book['id'] ?>">
+                                                <button class="btn btn-primary" type="submit">Devolver</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                        </div>
+                    </div>
+
+
+            <?php }
+                                            } ?>
+    <?php
+                                }
+                            } ?>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
 </body>
 
 </html>

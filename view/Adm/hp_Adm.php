@@ -14,7 +14,7 @@
 
 <body>
 
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
@@ -39,62 +39,62 @@
             </div>
     </nav>
 
+    <div class="container-table">
+        <div class="container">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Livro</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
 
-    <div class="container">
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Livro</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Status</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                 
-                    <th scope="col">Atualizar</th>
-                    <th scope="col">Excluir</th>
+                        <th scope="col">Atualizar</th>
+                        <th scope="col">Excluir</th>
 
-                </tr>
-            </thead>
-            <tbody>
-                <div class="section-books">
-                    <div class="type-books">
-                        <?php
-                        foreach ($books as $book) {
-                        ?>
+                    </tr>
+                </thead>
+                <tbody>
+                    <div class="section-books">
+                        <div class="type-books">
+                            <?php
+                            foreach ($books as $book) {
+                            ?>
 
-                            <tr>
-                                <td><img class="img-book" src="../view/Imagens/livro-icon-png-3.png" style="width: 3vw" /></td>
-                                <td><?= $book['name'] ?></td>
-                                <td><?= $book['status'] ?></td>
-                                <td><?= $user['phone'] ?></td>
-                                <td><?= $user['is_admin'] ?></td>
-                                <td>
-                                    <div class="btn">
-                                        <form method="post" action="/admin/edit_book">
+                                <tr>
+                                    <td><img class="img-book" src="../view/Imagens/livro-icon-png-3.png" style="width: 3vw" /></td>
+                                    <td><?= $book['name'] ?></td>
+                                    <td><?= $book['status'] ?></td>
+                                    <td><?= $user['phone'] ?></td>
+                                    <td><?= $user['is_admin'] ?></td>
+                                    <td>
+                                        <div class="btn">
+                                            <form method="post" action="/admin/edit_book">
+                                                <div class="btn-options">
+                                                    <input type="hidden" name="id" value="<?= $book['id'] ?>" />
+                                                    <button type="submit" class="btn btn-primary" id="info-book-modal">Atualizar livro </button>
+                                                </div>
+                                            </form>
+                                    </td>
+                                    <td>
+                                        <form method="post" action="/admin/delete_book">
                                             <div class="btn-options">
                                                 <input type="hidden" name="id" value="<?= $book['id'] ?>" />
-                                                <button type="submit" class="btn btn-primary" id="info-book-modal">Atualizar livro </button>
+                                                <button type="submit" class="btn btn-primary" id="info-book-modal">Excluir livro </button>
                                             </div>
                                         </form>
-                                </td>
-                                <td>
-                                    <form method="post" action="/admin/delete_book">
-                                        <div class="btn-options">
-                                            <input type="hidden" name="id" value="<?= $book['id'] ?>" />
-                                            <button type="submit" class="btn btn-primary" id="info-book-modal">Excluir livro </button>
-                                        </div>
-                                    </form>
-                                  
-                                </td>
-                            </tr>
-                    </div>
-                </div>
-            <?php } ?>
-    </div>
-    </tbody>
-    </table>
-    </div>
 
+                                    </td>
+                                </tr>
+                        </div>
+                    </div>
+                <?php } ?>
+        </div>
+        </tbody>
+        </table>
+    </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 

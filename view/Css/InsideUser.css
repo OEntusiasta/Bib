@@ -9,7 +9,15 @@ html,body{
 
     }
 
+.container-table{
+    background-color: #e3f2fd;
 
+}
+.mensagem{
+    margin-left: 6vh;
+    margin-top: 6vh;
+    margin-bottom:  6vh;
+}
     
 .nav a{
     color: black;
