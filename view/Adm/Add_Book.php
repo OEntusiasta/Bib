@@ -19,11 +19,13 @@
     </section>
     <div class="container-add-book">
 
-        <div class="d-flex justify-content-center h-90">
+        <div class="d-flex justify-content-center ">
             <div class="position-fixed" id="particles-js" style="width: 100vw; height: 100vh;"></div>
             <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>
             <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436735/app.js"></script>
-            <div class="card h-100">
+            
+            
+            <div class="card h-100" id="card-books">
                 <div class="card-header">
                     <h3>Adicionar Livro</h3>
                 </div>
@@ -35,14 +37,14 @@
                                 <span class="input-group-text"><i class="fas fa-book"></i></span>
 
                             </div>
-                            <input type="text" name="name" id="title-book" placeholder="Título" size="30" required />
+                            <input type="text" name="name" id="title-book" class="form-control" placeholder="Título" size="30" required />
                         </div>
 
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-book-reader"></i><span>
                             </div>
-                            <input type="text" name="author" id="author-book" placeholder="Autor" size="30" required />
+                            <input type="text" name="author" id="author-book" class="form-control" placeholder="Autor" size="30" required />
                         </div>
 
                         <div class="input-group form-group">
@@ -50,7 +52,7 @@
                                 <span class="input-group-text"><i class="fab fa-d-and-d"></i><span>
 
                             </div>
-                            <input type="text" name="category" id="author-book" placeholder="Categoria" size="30" required />
+                            <input type="text" name="category" id="author-book" class="form-control" placeholder="Categoria" size="30" required />
                         </div>
 
                         <div class="input-group form-group">
@@ -58,7 +60,7 @@
                                 <span class="input-group-text"><i class="far fa-calendar-check"></i><span>
 
                             </div>
-                            <select name="status" id="status">
+                            <select name="status" class="form-control" id="status">
                                 <option value="available">Available</option>
                                 <option value="pending">Pending</option>
                                 <option value="unavailable">Unvailable</option>

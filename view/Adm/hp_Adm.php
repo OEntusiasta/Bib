@@ -33,7 +33,7 @@
                     <li><a href="/admin/register_adminUser">Cadastrar usuário/admin</a></li>
                     <li><a href="/admin/list_user">Listar Usuários</a></li>
                     <li>
-                        <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="/" aria-expanded="false" aria-controls="nav-collapse2"><span class="glyphicon glyphicon-log-in"></span>Sair</a>
+                        <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="/" aria-expanded="false" aria-controls="nav-collapse2"></span>Sair</a>
                     </li>
                 </ul>
             </div>

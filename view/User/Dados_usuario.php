@@ -58,13 +58,14 @@
                                 <span class="input-group-text"><i class="fas fa-phone"></i>
 
                             </div>
-                            <input type="tel" name="phone" id="phone" class="form-control"  placeholder="Telefone" value="<?= $_SESSION['phone'] ?>" size="30" minlength="11" maxlength="15" required />
+                            <input class="form-control" type="text" name="phone" id="phone" placeholder="(99) 99999-9999" value="<?= $_SESSION['phone'] ?>" title="e.g (99) 99999-9999" pattern="^\([0-9]{2}\)\s[0-9]{5}-[0-9]{4}$" required>
+
                         </div>
                         <div class="btn-options d-flex justify-content-center">
                             <button class="btn btn-primary" type="submit" class="btn-info-book-log">Concluido</button>
                         </div>
                         <div class="btn-options d-flex justify-content-center">
-                            <a class="btn-exit" class="btn-info-book-exit" href="/User/hp">Voltar</a>
+                            <a class="btn-info-book-exit" href="/User/hp">Voltar</a>
 
                         </div>
                         
@@ -77,7 +78,7 @@
     </div>
 
 
-
+    <script type="text/javascript" src="../view/phone.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <body>
 </html>

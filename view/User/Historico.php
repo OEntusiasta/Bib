@@ -36,9 +36,9 @@ require_once('./Model/loan.php');
                     <li><a href="/User/hp">Home</a></li>
                     <li><a href="/User/Emprestimos">Empréstimos</a></li>
                     <li><a href="/client/historic">Histórico</a></li>
-                    <li><a href="/client/data_user"><span class=" glyphicon glyphicon-user"></span>Meus Dados</a></li>
+                    <li><a href="/client/data_user">Meus Dados</a></li>
                     <li>
-                        <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="/" aria-expanded="false" aria-controls="nav-collapse2"><span class="glyphicon glyphicon-log-in"></span>Sair</a>
+                        <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="/" aria-expanded="false" aria-controls="nav-collapse2">Sair</a>
                     </li>
                 </ul>
             </div>
@@ -94,6 +94,7 @@ require_once('./Model/loan.php');
 
     </div>
 
+    <script type="text/javascript" src="../view/pagination.js"></script>
 </body>
 
 </html>

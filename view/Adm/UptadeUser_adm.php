@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,31 +24,38 @@
             <div class="position-fixed" id="particles-js" style="width: 100vw; height: 100vh;"></div>
             <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>
             <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436735/app.js"></script>
-            <div class="card h-100">
+            <div class="card h-100" id="card-add-user">
                 <div class="card-header">
                     <h3>Atualizar Usuário</h3>
                 </div>
                 <form method="POST" action="/admin/store_user">
                     <div class="card-body">
 
-                        <div class="input-group form-group">
-                            <input type="email" name="email" id="email" placeholder="E-mail" size="30" value="<?= $user['email'] ?>" required autofocus />
-                        </div>
-
 
                         <div class="input-group form-group">
 
-                            <input type="text" name="name" id="name" placeholder="Nome" value="<?= $user['name'] ?>" size="30" required />
+                            <input type="text" name="name" id="name" class="form-control" value="<?= $user['name'] ?>"size="30" required />
                         </div>
 
                         <div class="input-group form-group">
-                            <input type="password" name="password" id="password" value="<?= $user['password'] ?>" placeholder="Senha" size="30" required />
+                            <input type="email" name="email" id="email" class="form-control" size="30" value="<?= $user['email'] ?>" required autofocus />
+                        </div>
+
+
+
+                        <div class="input-group form-group">
+                            <input type="password" name="password" id="password" class="form-control" value="<?= $user['password'] ?>" size="30" required />
+                        </div>
+
+                        <div class="input-group form-group">
+                            <input type="password" name="password" id="password" class="form-control" value="<?= $user['password'] ?>" size="30" required />
+                        </div>
+
+                        <div class="input-group form-group">
+                        <input class="form-control" type="text" name="phone" id="phone" placeholder="(99) 99999-9999" value="<?= $user['phone'] ?>" title="e.g (99) 99999-9999" pattern="^\([0-9]{2}\)\s[0-9]{5}-[0-9]{4}$" required>
                         </div>
                         <div class="input-group form-group">
-                            <input type="tel" name="phone" id="phone" placeholder="telefone" size="30" minlength="11"  value="<?= $user['phone'] ?>" maxlength="15" required />
-                        </div>
-                        <div class="input-group form-group">
-                            <select name="status" id="status">
+                            <select name="status" id="status" class="form-control">
                                 <option name="type_user" id="typeUser" value="<?= false ?>" required>Usuário Normal</option>
                                 <option name="type_user" id="typeAdmin" value="<?= true ?>" required>Usuário Administrador</option>
 
@@ -57,14 +63,14 @@
                         </div>
 
 
-                            <div class="btn-options d-flex justify-content-center">
-                                <button class="btn btn-primary" type="submit" class="btn-info-book-log">Concluido</button>
-                            </div>
-                            <div class="btn-options d-flex justify-content-center">
-                                <a class="btn-exit" class="btn-info-book-exit" href="/admin/list_user">Cancelar</a>
-
-                            </div>
+                        <div class="btn-options d-flex justify-content-center">
+                            <button class="btn btn-primary" type="submit" class="btn-info-book-log">Concluido</button>
                         </div>
+                        <div class="btn-options d-flex justify-content-center">
+                            <a class="btn-exit" class="btn-info-book-exit" href="/admin/list_user">Cancelar</a>
+
+                        </div>
+                    </div>
 
 
                 </form>
@@ -73,7 +79,7 @@
     </div>
 
 
-
+    <script type="text/javascript" src="../view/phone.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
