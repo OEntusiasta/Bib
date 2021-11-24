@@ -68,7 +68,7 @@
                             <button class="btn btn-primary" type="submit" class="btn-info-book-log">Concluido</button>
                         </div>
                         <div class="form-group text-center">
-                            <a class="btn-info-book-exit" href="/">Cancelar</a>
+                            <a class="text-white" href="/">Cancelar</a>
                         </div>
 
 

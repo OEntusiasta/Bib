@@ -65,7 +65,7 @@
                             <button class="btn btn-primary" type="submit" class="btn-info-book-log">Concluido</button>
                         </div>
                         <div class="btn-options d-flex justify-content-center">
-                            <a class="btn-info-book-exit" href="/User/hp">Voltar</a>
+                            <a class="text-white" href="/User/hp">Voltar</a>
 
                         </div>
                         

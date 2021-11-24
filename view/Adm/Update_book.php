@@ -73,7 +73,7 @@
                             <button class="btn btn-primary" type="submit" class="btn-info-book-log">Concluido</button>
                         </div>
                         <div class="btn-options d-flex justify-content-center">
-                            <a class="btn-exit" class="btn-info-book-exit" href="/admin/home_admin">Cancelar</a>
+                            <a class="text-white" href="/admin/home_admin">Cancelar</a>
 
                         </div>
                     </div>
